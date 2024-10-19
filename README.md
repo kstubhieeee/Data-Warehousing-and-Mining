@@ -7,4 +7,5 @@ This repository contains data warehousing and mining experiments performed in Py
 - **Experiment 5:** Implementation of the Agglomerative Hierarchical Clustering Algorithm.
 - **Experiment 6:** Implementation of Clustering algorithms (K-means/K-medoids).
 - **Experiment 7:** Implementation of the FP-Tree Algorithm.
+- **Experiment 8:** Implementation of Apriori Algorithm.
 - **Experiment 10:** Implementation of the Page Rank / HITS algorithm.
