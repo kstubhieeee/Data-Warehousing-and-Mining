@@ -1,4 +1,4 @@
-package exp8.apriori;
+package apriori;
 
 import java.io.*;
 import java.util.*;
