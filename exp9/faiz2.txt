@@ -1,0 +1,17 @@
+# Step 1: Install and Load the arules library(association rule mining)
+install.packages("arules")
+library(arules)
+
+# Step 2: Load sample transactional data
+data("Groceries")  # Use built-in Groceries dataset
+
+# Step 3: Apply the Apriori Algorithm
+# Set minimum support to 0.01 and confidence to 0.5
+rules <- apriori(Groceries, parameter = list(supp = 0.01, conf = 0.5))
+
+# Step 4: View the top 5 rules
+inspect(rules[1:5])
+
+# Step 5: Sort by lift and view the top 5 rules with highest lift
+rules_sorted <- sort(rules, by = "lift", decreasing = TRUE)
+inspect(rules_sorted[1:5])
