@@ -1,0 +1,16 @@
+# Load necessary library
+library(ggplot2)
+
+# Perform K-means clustering and create an Elbow Plot
+wss <- function(k) {
+  kmeans(mtcars[, c("mpg", "wt")], k, nstart = 10)$tot.withinss
+}
+
+# Compute and store WSS for k values from 1 to 15
+k.values <- 1:15
+wss_values <- sapply(k.values, wss)
+
+# Plot the Elbow graph without the title
+plot(k.values, wss_values, type = "b", pch = 19, frame = FALSE, 
+     xlab = "Number of clusters (k)",   # X-axis label
+     ylab = "Total within-clusters sum of squares")  # Y-axis label
